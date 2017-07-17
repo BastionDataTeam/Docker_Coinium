@@ -14,13 +14,16 @@ RUN yum -y update; yum clean all \
 RUN yum -y install git; yum clean all \
 
 && git clone https://github.com/CoiniumServ/CoiniumServ.git /usr/local/bin/CoiniumServ \
-&& cd /usr/local/bin/CoiniumServ; git submodule init; git submodule update \
-&& ls \
-&& pwd \
-&& cd /usr/local/bin/CoiniumServ/build/release \
-&& ls \
-&& pwd \
-&& sh /usr/local/bin/CoiniumServ/build/release/build.sh
+&& cd /usr/local/bin/CoiniumServ; git submodule init; git submodule update 
+mozroots --import --ask-remove
+xbuild build/CoiniumServ.sln /p:Configuration="Release"
+mono contrib/xunit/xunit.console.clr4.x86.exe src/Tests/bin/Release/CoiniumServ.Tests.dll
+# && ls \
+#&& pwd \
+#&& cd /usr/local/bin/CoiniumServ/build/release \
+#&& ls \
+#&& pwd \
+#&& sh /usr/local/bin/CoiniumServ/build/release/build.sh
 
 
 EXPOSE 8081
