@@ -1,7 +1,7 @@
 FROM mono:3.12
 
-RUN yum -y install wget \
- &&  wget -np -nH -r http://www.blinkdynamics.uk/bin/Release/ /usr/local/bin/CoiniumServ
+RUN yum -y install wget
+RUN wget -np -nH -r http://www.blinkdynamics.uk/bin/Release/ /usr/local/bin/CoiniumServ
 
 RUN chmod u+x /usr/local/bin/CoiniumServ
 
