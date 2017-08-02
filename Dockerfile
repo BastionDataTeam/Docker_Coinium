@@ -1,4 +1,4 @@
-FROM mono:3.12
+FROM mono:latest
 
 ADD http://www.blinkdynamics.uk/bin/ /usr/local/bin/CoiniumServ/
 
