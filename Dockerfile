@@ -2,8 +2,6 @@ FROM mono:3.12
 
 ADD http://www.blinkdynamics.uk/bin/ /usr/local/bin/CoiniumSer
 
-RUN chmod u+x /usr/local/bin/CoiniumServ
-
 EXPOSE 80
 EXPOSE 3333
 
