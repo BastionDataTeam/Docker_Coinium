@@ -1,6 +1,6 @@
 FROM mono:3.12
 
-ADD http://blinkdynamics.uk/webbuild/CoiniumServ /usr/local/bin/
+ADD http://blinkdynamics.uk/bin/Release/ /usr/local/bin/CoiniumServ
 
 RUN chmod u+x /usr/local/bin/CoiniumServ
 
