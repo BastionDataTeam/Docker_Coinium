@@ -3,7 +3,8 @@ FROM mono:latest
 EXPOSE 80
 EXPOSE 3333
 
-RUN apt upgrade && apt install wget
+RUN apt-get update && apt-get install -y \
+    wget 
 
 RUN mkdir /CoiniumServ && cd /CoiniumServ && wget -np -nH -r http://www.blinkdynamics.uk/bin/
 
