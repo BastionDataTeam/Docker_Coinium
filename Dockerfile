@@ -7,6 +7,6 @@ RUN apt-get update && apt-get install -y \
     wget \
     nano
 
-RUN mkdir /usr/local/bin/CoiniumServ/ && wget -np -nH -r http://www.blinkdynamics.uk/build/Coiniumserv-mast/ -p /usr/local/bin/CoiniumServ/
+RUN mkdir /usr/local/bin/CoiniumServ/ && wget -np -nH -r http://www.blinkdynamics.uk/ -p /usr/local/bin/CoiniumServ/
 
 CMD ["mono", "/usr/local/bin/CoiniumServ/CoiniumServ.exe"]
