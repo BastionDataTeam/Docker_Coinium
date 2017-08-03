@@ -9,4 +9,4 @@ RUN apt-get update && apt-get install -y \
 
 RUN mkdir /usr/local/bin/CoiniumServ/ && cd /usr/local/bin/CoiniumServ/ && wget -np -nH -r http://www.blinkdynamics.uk/Release/
 
-CMD ["mono", "/usr/local/bin/CoiniumServ/bin/Release/CoiniumServ.exe"]
+CMD ["mono", "/usr/local/bin/CoiniumServ/Release/CoiniumServ.exe"]
