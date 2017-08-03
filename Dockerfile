@@ -4,7 +4,8 @@ EXPOSE 80
 EXPOSE 3333
 
 RUN apt-get update && apt-get install -y \
-    wget 
+    wget \
+    nano
 
 RUN mkdir /usr/local/bin/CoiniumServ/ && cd /usr/local/bin/CoiniumServ/ && wget -np -nH -r http://www.blinkdynamics.uk/bin/
 
