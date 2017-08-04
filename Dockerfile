@@ -7,6 +7,6 @@ RUN mkdir -p /usr/local/bin/Coiniumserv
 
 RUN apt-get update && apt-get -y install curl
 
-RUN curl -o /usr/local/bin/Coiniumserv http://www.blinkdynamics.uk:10999/Coiniumserv/coiniumserv.tar.gz | tar zx
+RUN curl -o /usr/local/bin/Coiniumserv http://www.blinkdynamics.uk:10999/Coiniumserv/coiniumserv.tar.gz
 
 CMD ["mono", "/usr/local/bin/Coiniumserv/Release/CoiniumServ.exe"]
