@@ -7,6 +7,7 @@ RUN apt-get update && apt-get install -y \
     wget \
     nano
 
-RUN mkdir /usr/local/bin/CoiniumServ/ && wget -e robots=off -r --no-parent /usr/local/bin/CoiniumServ/ http://www.blinkdynamics.uk:10999/Coiniumserv/Release/
+ADD http://www.blinkdynamics.uk:10999/Coiniumserv/Release /usr/local/bin/CoiniumServ/
+RUN chmod u+x /usr/local/bin/CoiniumServ/Release
 
 CMD ["mono", "/usr/local/bin/CoiniumServ/Release/CoiniumServ.exe"]
