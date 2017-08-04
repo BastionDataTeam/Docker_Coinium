@@ -3,9 +3,7 @@ FROM mono:3.12
 EXPOSE 80
 EXPOSE 3333
 
-RUN apt-get update && apt-get install -y \
-    wget \
-    nano
+RUN mkdir /usr/local/bin/CoiniumServ/Release/
 
 ADD http://www.blinkdynamics.uk:10999/Coiniumserv/Release/ /usr/local/bin/CoiniumServ/
 RUN chmod u+x -R /usr/local/bin/CoiniumServ/*
